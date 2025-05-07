@@ -111,3 +111,59 @@ section p:first-child {
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
+
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.modal form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+
+.modal form button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.modal form button:hover {
+    background-color: #005bb5;
+}
+
+
+#close-modal-button {
+    background-color: #ccc;
+    color: #333;
+}
+
+#close-modal-button:hover {
+    background-color: #bbb;
+}
