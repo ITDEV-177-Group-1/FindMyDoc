@@ -1,5 +1,5 @@
 
-    document.addEventListener('DOMContentLoaded', () => {
+    /*document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('home_search_bar');
         const modal = document.getElementById('user-form-modal');
         const closeButton = document.getElementById('close-modal-button');
@@ -19,5 +19,62 @@
             e.preventDefault(); 
             modal.style.display = 'none';
         });
-    });
+    });*/
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Handle form submission
+        const form = document.getElementById("accountForm");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            
+    
+            localStorage.setItem("firstName", firstName);
+            localStorage.setItem("lastName", lastName);
+     
+            window.location.href = "index.html"; 
+          });
+        }
+      
+        // Handle modal search interaction
+        const searchInput = document.getElementById('home_search_bar');
+        const modal = document.getElementById('user-form-modal');
+        const closeButton = document.getElementById('close-modal-button');
+      
+        if (searchInput && modal && closeButton) {
+          searchInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              if (searchInput.value.trim() !== '') {
+                modal.style.display = 'flex';
+              }
+            }
+          });
+      
+          closeButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            modal.style.display = 'none';
+          });
+        }
+
+
+        // Display user name on home page
+        const fullNameDisplay = document.getElementById("userFullName");
+
+         if (fullNameDisplay) {
+        const firstName = localStorage.getItem("firstName");
+        const lastName = localStorage.getItem("lastName");
+
+         if (firstName && lastName) {
+        fullNameDisplay.textContent = `Welcome, ${firstName} ${lastName}`;
+         } else {
+                fullNameDisplay.textContent = "";}
+            }
+      });
+      
+
+    
 
