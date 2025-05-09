@@ -235,3 +235,21 @@ form + p a {
 form + p a:hover {
     text-decoration: underline;
 }
+
+
+.signup-redirect {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.signup-redirect a {
+    color: #0073e6;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.signup-redirect a:hover {
+    text-decoration: underline;
+}

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("firstName", firstName);
         localStorage.setItem("lastName", lastName);
   
-        window.location.href = "Index.html"; // Adjust path if needed
+        window.location.href = "Index.html"; 
       });
     }
   
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   
-    // Optional: search bar modal logic
+    // Search bar modal logic
     const searchInput = document.getElementById("home_search_bar");
     const modal = document.getElementById("user-form-modal");
     const closeButton = document.getElementById("close-modal-button");
