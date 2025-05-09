@@ -259,7 +259,8 @@ form + p a:hover {
 }
 
 #log_in,
-#sign_up {
+#sign_up,
+#logoutButton {
     background-color: white;
     color: #0073e6;
     padding: 10px 20px;
@@ -272,6 +273,7 @@ form + p a:hover {
 }
 
 #log_in:hover,
-#sign_up:hover {
+#sign_up:hover,
+#logoutButton {
     background-color: #e6f0ff;
 }
