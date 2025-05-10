@@ -18,36 +18,52 @@
 
         <form action="" method="post">
             <fieldset>
-                <!--stars = *-->>
+                <!--stars = * -->>
                 <legend>Rate your specialist</legend>
                 <label>
                     <input type="radio" name="rating" value="5" required> *****
                 </label>
 
                 <label>
-                    <input type="radio" name="rating" value="4" required> ****
+                    <input type="radio" name="rating" value="4"> ****
                 </label>
 
                 <label>
-                    <input type="radio" name="rating" value="3" required> ***
+                    <input type="radio" name="rating" value="3"> ***
                 </label>
 
                 <label>
-                    <input type="radio" name="rating" value="5" required> **
+                    <input type="radio" name="rating" value="2"> **
                 </label>
 
                 <label>
-                    <input type="radio" name="rating" value="5" required> *
+                    <input type="radio" name="rating" value="1"> *
                 </label>
             </fieldset>
 
             <p>
                 <label>
-
+                    Specialist's Name:
+                    <input type="text" name="specialistName" required>
                 </label>
             </p>
+
+            <p>
+                <label>
+                    Location:
+                    <input type="text" name="specialistLocation" required>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Write Your Thoughts:
+                    <textarea name="reviewSpace" cols="50" rows="5" placeholder="Write about your experience here..." required> </textarea> 
+                </label>
+            </p>
+
+            <button type="submit">Submit Your Review</button>
         </form>
-        
         <script src="" async defer></script>
     </body>
 </html>
