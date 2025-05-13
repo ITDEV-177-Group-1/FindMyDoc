@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         suggestionBox.classList.add("hidden");
         return;
       }
-
+      // search sorting
       const sympMatch = symptoms.filter(symptom =>
         symptom.toLowerCase().startsWith(query)
       );
