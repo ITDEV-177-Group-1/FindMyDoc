@@ -75,8 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("home_search_bar");
   const modal = document.getElementById("user-form-modal");
   const closeButton = document.getElementById("close-modal-button")
-  //etc
-  const symptoms = ["Cold", "Cough", "Chest Pain", "Sore Tooth", "Sore throat","Dry Skin", ];
+  
+  const symptoms = ["Cold", "Cough", "Chest Pain", "Sore Tooth", "Sore Throat","Dry Skin", "Headache", "Fever", 
+  "Fatigue", "Nausea", "Vomiting", "Diarrhea","Runny Nose", "Congestion", "Dizziness","Muscle Aches", "Joint Pain",
+  "Rash", "Itchy Eyes", "Sneezing","Loss of Appetite", "Difficulty Sleeping","Anxiety", "Depression", "Blurred Vision",
+  "Abdominal Pain", "Back Pain",];//etc
   const suggestionBox = document.getElementById("suggestions")
 
   //search engine logic 
