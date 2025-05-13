@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value.trim().toLowerCase();
         const firstName = document.getElementById("firstName").value;
         const lastName = document.getElementById("lastName").value;
-  
-        localStorage.setItem(email, JSON.stringify({ firstName, lastName }));
+        const password = document.getElementById("password").value;
+   
+        localStorage.setItem(email, JSON.stringify({ firstName, lastName, password }));
         localStorage.setItem("currentUserEmail", email);
   
         window.location.href = "Index.html";
@@ -19,20 +20,28 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===== LOGIN LOGIC =====
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
-      loginForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-  
-        const loginEmail = document.getElementById("loginEmail").value.trim().toLowerCase();
-        const storedData = localStorage.getItem(loginEmail);
-  
-        if (storedData) {
-          localStorage.setItem("currentUserEmail", loginEmail);
-          window.location.href = "Index.html";
-        } else {
-          alert("No account found with that email.");
-        }
-      });
+     loginForm.addEventListener("submit", function (e) {
+     e.preventDefault();
+
+     const loginEmail = document.getElementById("loginEmail").value.trim().toLowerCase();
+     const loginPassword = document.getElementById("password").value;
+
+     const storedData = localStorage.getItem(loginEmail);
+
+    if (storedData) {
+      const user = JSON.parse(storedData);
+
+      if (user.password === loginPassword) {
+        localStorage.setItem("currentUserEmail", loginEmail);
+        window.location.href = "Index.html";
+      } else {
+        alert("Incorrect password.");
+      }
+    } else {
+      alert("No account found with that email.");
     }
+  });
+}
   
     // ===== HOME PAGE LOGIC =====
     const fullNameDisplay = document.getElementById("userFullName");
