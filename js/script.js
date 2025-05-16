@@ -97,7 +97,7 @@
     const closeButton = document.getElementById("close-modal-button");
     const suggestionBox = document.getElementById("suggestions");
     const symptoms = [
-      "Cold", "Cough", "Chest Pain", "Sore Tooth", "Sore Throat", "Dry Skin",
+      "Cold", "Cough", "Chest Pain", "Sore Tooth","Tooth pain","Cavity","Sore Throat", "Dry Skin",
       "Headache", "Fever", "Fatigue", "Nausea", "Vomiting", "Diarrhea", "Runny Nose",
       "Congestion", "Dizziness", "Muscle Aches", "Joint Pain", "Rash", "Itchy Eyes",
       "Sneezing", "Loss of Appetite", "Difficulty Sleeping", "Anxiety", "Depression",
@@ -115,7 +115,7 @@
         }
 
         const matches = symptoms.filter(symptom =>
-          symptom.toLowerCase().startsWith(query)
+          symptom.toLowerCase().includes(query)
         );
 
         matches.forEach(match => {
